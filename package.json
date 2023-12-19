@@ -1,0 +1,35 @@
+{
+  "name": "@fabulatedev/ui-api-sdk",
+  "version": "1.0.10",
+  "description": "SDK to expose a UI API for consumption by the Fabulate extension.",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/**",
+    "lib/**",
+    "src/**"
+  ],
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./dist/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/fabulatedev/ui-api-sdk"
+  },
+  "types": "./lib/index.d.ts",
+  "author": "ashubham@fabulate.dev",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^4.8.0",
+    "typescript": "^5.3.3"
+  }
+}
